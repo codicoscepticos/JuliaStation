@@ -22,7 +22,7 @@ impl Bios {
   }
 
   /// Fetch the 32 bit little endian word at 'offset'
-  pub fn load(&self, offset: u32) -> u32 {
+  pub fn load32(&self, offset: u32) -> u32 {
     let offset = offset as usize;
 
     let b0 = self.data[offset] as u32;
