@@ -1,14 +1,17 @@
+mod interconnect
+
 /// CPU State
 pub struct CPU {
   /// The program counter register
   pc: u32,
+  inter: Interconnect
 }
 
-impl Cpu {
-  pub fn new() -> Cpu {
-    Cpu {
+impl CPU { // impls are used to define methods for Rust structs and enums
+  pub fn new() -> CPU {
+    CPU {
       // PC reset value at the beginning of the BIOS
-      pc: 0xbfc00000,
+      pc: 0xbfc00000
     }
   }
 

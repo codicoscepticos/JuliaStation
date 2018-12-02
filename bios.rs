@@ -15,7 +15,7 @@ impl Bios {
     try!(file.take(BIOS_SIZE)).read_to_end(&mut data));
 
     if data.len() == BIOS_SIZE as usize {
-      Ok(Bios {data: data})
+      Ok( Bios {data: data} )
     } else {
       Err(Error::new(ErrorKind::InvalidInput, "Invalid_BIOS_size"))
     }
